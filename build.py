@@ -4,7 +4,7 @@ import json, datetime, html
 # ===== FILL THESE =====
 DOMAIN = ""   # e.g. "gta6cheatcodes.com" (no https, no slash)
 PUB    = ""   # AdSense publisher id, e.g. "pub-1234567890123456"
-EMAIL  = ""   # e.g. "contact@gta6cheatcodes.com"
+EMAIL  = "gamecode.team@gmail.com"   # e.g. "contact@gta6cheatcodes.com"
 GSC    = ""   # Google Search Console meta code (only the content="..." value)
 # ======================
 
