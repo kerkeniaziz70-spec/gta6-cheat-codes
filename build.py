@@ -2,6 +2,7 @@
 import json, datetime, html
 
 # ===== FILL THESE =====
+CNAME  = False   # True once the domain is bought and its DNS points to GitHub Pages
 DOMAIN = "grandcheatcodes.com"   # e.g. "gta6cheatcodes.com" (no https, no slash)
 PUB    = ""   # AdSense publisher id, e.g. "pub-1234567890123456"
 EMAIL  = "gamecode.team@gmail.com"   # e.g. "contact@gta6cheatcodes.com"
@@ -175,7 +176,7 @@ open("404.html", "w", encoding="utf-8").write(
 if BASE:
     open("sitemap.xml", "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + "".join(f"<url><loc>{BASE}{'' if k == 'index' else k + '.html'}</loc><lastmod>{TODAY}</lastmod></url>" for k in P) + "</urlset>")
-    open("CNAME", "w").write(DOMAIN)
+    if CNAME: open("CNAME", "w").write(DOMAIN)
 open("robots.txt", "w").write("User-agent: *\nAllow: /\n" + (f"Sitemap: {BASE}sitemap.xml\n" if BASE else ""))
 if PUB:
     open("ads.txt", "w").write(f"google.com, {PUB}, DIRECT, f08c47fec0942fa0\n")
