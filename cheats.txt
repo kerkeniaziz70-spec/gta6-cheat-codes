@@ -1,5 +1,4 @@
-/* Name|category|D-pad (U R D L)|How to unlock — add/edit lines here */
-const RAW=`$250,000 Money|player|URDLULDR|Finish the story
+$250,000 Money|player|URDLULDR|Finish the story
 Drunk|player|ULRUULRULR|Spend $2,500 on alcohol
 Unlimited Focus|player|DUUDUDUDUR|Finish the story
 No Fall Damage|player|DUUUUUUUD|Survive a freefall from 40 feet 20 times
@@ -59,6 +58,4 @@ Fast Forward Filter|world|DDURRULLDL|Complete 50 meditations
 Fisheye Filter|world|DDURRULLLU|Catch 100 fish
 Faded Glory Filter|world|DDURRULLLR|Rob 50 stores with your partner
 Pixel Art Filter|world|DDURRULLLD|Make $250,000 selling collectibles
-Hellscape Filter|world|DDURRULLLL|Steal 100 cop vehicles`;
-const AR={U:"↑",R:"→",D:"↓",L:"←"};
-const C=RAW.split("\n").map(l=>{const[n,c,s,u]=l.split("|");return[n,c,s=="TBA"?"To be announced":[...s].map(x=>AR[x]).join(" "),u||"To be announced"]});
+Hellscape Filter|world|DDURRULLLL|Steal 100 cop vehicles
