@@ -2,13 +2,13 @@
 import json, datetime, html
 
 # ===== FILL THESE =====
-DOMAIN = ""   # e.g. "gta6cheatcodes.com" (no https, no slash)
+DOMAIN = "grandcheatcodes.com"   # e.g. "gta6cheatcodes.com" (no https, no slash)
 PUB    = ""   # AdSense publisher id, e.g. "pub-1234567890123456"
 EMAIL  = "gamecode.team@gmail.com"   # e.g. "contact@gta6cheatcodes.com"
 GSC    = ""   # Google Search Console meta code (only the content="..." value)
 # ======================
 
-SITE = "GTA6CheatCodes.hub"
+SITE = "GrandCheatCodes.com"
 TODAY = datetime.date.today().isoformat()
 BASE = f"https://{DOMAIN}/" if DOMAIN else ""
 AR = {"U": "↑", "R": "→", "D": "↓", "L": "←"}
@@ -38,10 +38,7 @@ NAV = [("index", "All Cheats"), ("ps5-cheats", "PS5"), ("xbox-cheats", "Xbox"), 
        ("unlock-challenges", "Unlocks"), ("best-cheats", "Best Cheats"), ("how-to-enter-cheats", "How to Enter"), ("faq", "FAQ")]
 def href(k): return "./" if k == "index" else f"{k}.html"
 
-LOGO = ('<svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2e6690"/>'
-        '<path d="M12.5 6h7v6.5H26v7h-6.5V26h-7v-6.5H6v-7h6.5z" fill="#fff"/>'
-        '<path class="arr" d="M16 7.6l2.2 2.8h-4.4zM16 24.4l2.2-2.8h-4.4zM7.6 16l2.8-2.2v4.4zM24.4 16l-2.8-2.2v4.4z" fill="#2e6690"/></svg>')
-HEADER = (f'<header><div class="nav"><a class="logo" href="./">{LOGO}<span>GTA6<b>Cheats</b></span></a>'
+HEADER = (f'<header><div class="nav"><a class="logo" href="./"><span>GrandCheatCodes<small>.com</small></span></a>'
           '<button class="mbtn" aria-label="Open menu" aria-expanded="false">☰</button></div><nav class="menu">'
           + "".join(f'<a href="{href(k)}">{v}</a>' for k, v in NAV) + "</nav></header>")
 FOOTER = ('<footer><p>' + " · ".join(f'<a href="{href(k)}">{v}</a>' for k, v in

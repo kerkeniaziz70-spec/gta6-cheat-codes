@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://grandcheatcodes.com/sitemap.xml
